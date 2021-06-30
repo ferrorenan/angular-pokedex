@@ -1,0 +1,21 @@
+<main class="detail">
+  <ng-container *ngFor="let informationsPokemon of pokemonDetail">
+    <section class="detail-content">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-4">
+            <img [src]="informationsPokemon.sprites.other.dream_world.front_default"
+                 alt="Pokemonss"
+                 class="pokemon-img">
+
+          </div>
+          <div class="col-lg-4">
+            <h2>
+              {{ informationsPokemon.name }}
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+  </ng-container>
+</main>

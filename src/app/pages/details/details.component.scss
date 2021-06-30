@@ -1,0 +1,23 @@
+@import "../../../resources/sass/frontend/common";
+
+.detail {
+
+  &-content {
+
+    @include media-breakpoint-up(lg) {
+
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .pokemon {
+
+      &-img {
+
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+}

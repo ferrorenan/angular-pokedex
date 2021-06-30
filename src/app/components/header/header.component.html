@@ -1,0 +1,38 @@
+<header class="header">
+  <div class="header-content">
+    <img src="./assets/svg/pokebola.svg"
+         alt=""
+         title=""
+         class="header-ic">
+    <button (click)="this.toggleActiveClassNav()"
+            class="btn">
+      <img src="./assets/svg/ic-hamburguer-menu.svg"
+           alt=""
+           title=""
+           class="header-ic">
+    </button>
+  </div>
+
+  <nav class="navbar" [ngClass]="(toggleNavActiveClass) ? 'navbar-active' : ''">
+    <ul>
+      <li class="navbar-item">
+        <a href=""
+           class="navbar-item-link">
+          Home
+        </a>
+      </li>
+      <li class="navbar-item">
+        <a href=""
+           class="navbar-item-link">
+          Pokedex
+        </a>
+      </li>
+      <li class="navbar-item">
+        <a href=""
+           class="navbar-item-link">
+          About
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
