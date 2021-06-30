@@ -1,57 +1,36 @@
-// Project's font configuration
+$fonts-base-path: '../../../assets/fonts';
 
-// There's 5 generic family groups ‘serif’, ‘sans-serif’, ‘cursive’, ‘fantasy’, and ‘monospace’
-
-$fonts-base-path: '../../fonts';
-
-// Generate @font-face's content body based on a map of font family.
-// e.g.: $open-sans-regular: (
-//    family: 'open_sansregular',
-//    file-name: 'open_sans_regular', -> WITHOUT FONT EXTENSION
-//  );
 @mixin font-face($font-map) {
 
   $family: map-get($font-map, 'family');
   $file-name: map-get($font-map, 'file-name');
 
   font-family: '#{$family}';
-  src: url('/assets/fonts/#{$fonts-base-path}/#{$file-name}.woff2') format('woff2');
+  src: url('#{$fonts-base-path}/#{$file-name}.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-$regular-font-map: (
-    family: 'FiraSans-Regular',
-    file-name: 'FiraSans-Regular',
+$light-font-map: (
+  family: 'JosefinSans-Light',
+  file-name: 'JosefinSans-Light',
 );
 
-$medium-font-map: (
-    family: 'FiraSansCondensed-Medium',
-    file-name: 'FiraSansCondensed-Medium',
+$regular-font-map: (
+    family: 'JosefinSans-Regular',
+    file-name: 'JosefinSans-Regular',
 );
 
 $bold-font-map: (
-    family: 'FiraSansCondensed-Bold',
-    file-name: 'FiraSansCondensed-Bold',
-);
-
-$extra-bold-font-map: (
-    family: 'FiraSansCondensed-ExtraBold',
-    file-name: 'FiraSansCondensed-ExtraBold',
-);
-
-$contrast-font-map: (
-    family: 'Dominique',
-    file-name: 'Dominique',
+    family: 'JosefinSans-Bold',
+    file-name: 'JosefinSans-Bold',
 );
 
 $project-fonts: (
+    light: $light-font-map,
     regular: $regular-font-map,
-    medium: $medium-font-map,
     bold: $bold-font-map,
-    extra-bold: $extra-bold-font-map,
-    contrast: $contrast-font-map,
 );
 
 @each $font-key, $font-map in $project-fonts {
