@@ -5,6 +5,7 @@ import { PokedexRoutingModule } from './pokedex-routing.module';
 import {PokedexComponent} from './pokedex.component';
 import {CardModule} from '../../components/card/card.module';
 import {BoardModule} from '../../components/board/board.module';
+import {SliderPokemonsModule} from "../../components/slider-pokemons/slider-pokemons.module";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {BoardModule} from '../../components/board/board.module';
         CommonModule,
         PokedexRoutingModule,
         CardModule,
-        BoardModule
+        BoardModule,
+        SliderPokemonsModule
     ]
 })
 export class PokedexModule { }

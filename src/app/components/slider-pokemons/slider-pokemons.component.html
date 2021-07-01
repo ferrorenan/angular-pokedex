@@ -1,0 +1,50 @@
+<div class="slider-pokedex">
+  <swiper [speed]="speed"
+          [direction]="direction"
+          [autoHeight]="autoHeight"
+          [roundLengths]="roundLengths"
+          [slidesPerView]="slidesPerView"
+          [centeredSlides]="centeredSlides"
+          [spaceBetween]="spaceBetween"
+          [slideToClickedSlide]="slideToClickedSlide"
+          [loop]="loop" [breakpoints]="breakpoints"
+          [pagination]="pagination"
+          [navigation]="navigation">
+    <ng-template swiperSlide *ngFor="let pokemon of pokemons">
+      <app-internal-card>
+        <img [src]="pokemon.sprites.other.dream_world.front_default"
+             alt="Pokemon"
+             class="card-img">
+        <h2 class="card-content-title">
+          {{pokemon.name}}
+        </h2>
+        <div class="row">
+          <div class="col-12">
+            <a class="btn btn-custom-primary">
+              Detalhes
+            </a>
+          </div>
+        </div>
+      </app-internal-card>
+    </ng-template>
+  </swiper>
+</div>
+
+<div class="col-12">
+  <div class="js-solutions-controls slider-pokedex-controls">
+    <button class="js-slider-gallery-button-prev-home"
+            data-controls="prev"
+            aria-label="Voltar">
+      <img src="../../../assets/svg/ic-arrow.svg"
+           alt=""
+           class="slider-pokedex-controls-ic">
+    </button>
+    <button class="js-slider-gallery-button-next-home"
+            data-controls="next"
+            aria-label="Próximo">
+      <img src="../../../assets/svg/ic-arrow.svg"
+           alt=""
+           class="slider-pokedex-controls-ic">
+    </button>
+  </div>
+</div>

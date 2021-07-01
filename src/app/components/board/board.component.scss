@@ -3,12 +3,8 @@
 .board {
 
   background-color: $primary;
-  padding-top: 7rem;
+  height: 100vh;
   overflow: hidden;
-
-  &-flex-center {
-
-    display: flex;
-    align-items: center;
-  }
+  display: flex;
+  align-items: center;
 }

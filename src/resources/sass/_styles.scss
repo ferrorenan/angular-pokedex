@@ -1,0 +1,12 @@
+@import '~swiper/swiper-bundle';
+
+.swiper-slide {
+
+  transition: all 1s;
+}
+
+.swiper-slide-active {
+
+  transform: scale(1.2) !important;
+  transition: all 1s;
+}

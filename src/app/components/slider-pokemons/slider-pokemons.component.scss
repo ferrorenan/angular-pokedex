@@ -1,0 +1,64 @@
+@import "../../../resources/sass/frontend/common";
+
+.card {
+
+  &-content {
+
+    position: relative;
+    text-align: center;
+    z-index: 2;
+
+    &-title {
+
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-img {
+
+    width: 80px;
+    height: 80px;
+    margin-bottom: 2rem;
+  }
+}
+
+.slider-pokedex {
+
+  @include media-breakpoint-up(lg) {
+
+    margin-bottom: 2rem;
+  }
+
+  &-controls {
+
+    outline: none;
+    margin-top: 40px;
+    text-align: center;
+
+    & [data-controls] {
+
+      background:none;
+      outline:none;
+      border:none;
+      transition:opacity .3s linear;
+      margin: 0 10px;
+      border-radius: 25px;
+    }
+
+    & [data-controls=prev] {
+
+      transform:rotateY(180deg);
+    }
+
+    &:focus {
+
+      outline: none;
+    }
+
+    &-ic {
+
+      width: 4.5rem;
+      height: 3rem;
+    }
+  }
+}
