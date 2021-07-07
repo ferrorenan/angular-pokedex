@@ -18,4 +18,9 @@ export class HeaderComponent implements OnInit {
 
     this.toggleNavActiveClass = !this.toggleNavActiveClass;
   }
+
+  closeMenu(): boolean {
+
+    return this.toggleNavActiveClass = false;
+  }
 }

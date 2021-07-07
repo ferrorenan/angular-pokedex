@@ -16,23 +16,26 @@
   <nav class="navbar" [ngClass]="(toggleNavActiveClass) ? 'navbar-active' : ''">
     <ul>
       <li class="navbar-item">
-        <a routerLink="/"
+        <a (click)="this.closeMenu()"
+           routerLink="/"
            class="navbar-item-link">
           Home
         </a>
       </li>
       <li class="navbar-item">
-        <a routerLink="/pokedex"
+        <a (click)="this.closeMenu()"
+           routerLink="/pokedex"
            class="navbar-item-link">
           Pokedex
         </a>
       </li>
-      <li class="navbar-item">
-        <a href=""
-           class="navbar-item-link">
-          About
-        </a>
-      </li>
+<!--      <li class="navbar-item">-->
+<!--        <a (click)="this.toggleActiveClassNav()"-->
+<!--           href=""-->
+<!--           class="navbar-item-link">-->
+<!--          About-->
+<!--        </a>-->
+<!--      </li>-->
     </ul>
   </nav>
 </header>
