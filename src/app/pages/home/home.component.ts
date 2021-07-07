@@ -20,7 +20,9 @@ export class HomeComponent implements OnInit {
 
     const scene = new THREE.Scene();
 
-    const matCapTexture = new THREE.MeshNormalMaterial();
+    const matCapTexture = new THREE.MeshStandardMaterial();
+    matCapTexture.roughness = 0.1;
+    matCapTexture.metalness = 0.1;
 
     const fontLoader = new THREE.FontLoader();
 
@@ -118,6 +120,20 @@ export class HomeComponent implements OnInit {
     const camera = new THREE.PerspectiveCamera(75, sizesW.width / sizesW.height, 0.1, 1000);
     camera.position.z = 3;
     scene.add(camera);
+
+    const directionalLight = new THREE.DirectionalLight(0x2255D7, 0.9);
+    directionalLight.position.set(1, 1, 3);
+
+    const directionalLight2 = new THREE.DirectionalLight(0xFFD00D, 0.9);
+    directionalLight2.position.set(1, 1, -4);
+
+    scene.add(directionalLight, directionalLight2);
+
+    // const directionalLightHelper = new THREE.DirectionalLightHelper(directionalLight, 2);
+    // scene.add(directionalLightHelper);
+    //
+    // const directionalLightHelper2 = new THREE.DirectionalLightHelper(directionalLight2, 2);
+    // scene.add(directionalLightHelper2);
 
     // @ts-ignore
     const renderer = new THREE.WebGLRenderer({
