@@ -18,13 +18,18 @@ export class DetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
+    this.getInformationsPokemon();
+    this.getCharacteristicsPokemon();
+  }
+
+  getInformationsPokemon(): void {
+
     const id = this.route.snapshot.paramMap.get('id');
     this.service.getMoreData(id!).subscribe((response: any) => {
       this.pokemonDetail.push(response)
       console.log(this.pokemonDetail);
     })
-
-    this.getCharacteristicsPokemon();
   }
 
   getCharacteristicsPokemon(): void {
@@ -33,6 +38,7 @@ export class DetailsComponent implements OnInit {
     this.service.getMCharacteristics(idPokemon!).subscribe(
       (pokemonCharacteristics: any) => {
         this.pokemonCharacteristics.push(pokemonCharacteristics);
+        console.log(this.pokemonCharacteristics);
       }
     )
   }

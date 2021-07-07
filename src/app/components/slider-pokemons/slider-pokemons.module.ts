@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {SliderPokemonsComponent} from "./slider-pokemons.component";
 import {SwiperModule} from "swiper/angular";
 import {InternalCardModule} from "../internal-card/internal-card.module";
+import {PokedexRoutingModule} from "../../pages/pokedex/pokedex-routing.module";
 
 
 
@@ -13,7 +14,8 @@ import {InternalCardModule} from "../internal-card/internal-card.module";
     imports: [
         CommonModule,
         SwiperModule,
-        InternalCardModule
+        InternalCardModule,
+        PokedexRoutingModule
     ],
   exports: [
     SliderPokemonsComponent
