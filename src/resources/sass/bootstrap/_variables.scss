@@ -48,17 +48,16 @@ $pink:    #d63384 !default;
 $red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
-$super-nova: #FFD00D;
-$peach: #ffe8ae;
-$eastern-blue: #179898;
 $green:   #198754 !default;
 $teal:    #20c997 !default;
-$green-haze: #07a14e;
+$cyan:    #0dcaf0 !default;
+
+$monza: #E6051B;
+$clementine: #E86C01;
+$eastern-blue: #179898;
+$harlequim: #28e605;
 $turquoise: #45E5AC;
 $mariner: #2255D7;
-$cyan:    #0dcaf0 !default;
-$havelock-blue: #5ca7df;
-$soapstone: #fffaf8;
 
 // scss-docs-end color-variables
 
@@ -83,10 +82,10 @@ $colors: (
 // scss-docs-start theme-color-variables
 $primary:       $razzmatazz;
 $secondary:     $bahama-blue;
-$success:       $green-haze;
+$success:       $harlequim;
 $info:          $mariner;
-$warning:       $super-nova;
-$danger:        $red;
+$warning:       $clementine;
+$danger:        $monza;
 $light:         $eastern-blue;
 $dark:          $downriver;
 // scss-docs-end theme-color-variables
@@ -100,7 +99,8 @@ $theme-colors: (
   "warning":            $warning,
   "danger":             $danger,
   "light":              $light,
-  "dark":               $dark
+  "dark":               $dark,
+  "dark-warning": darken($warning, 2%)
 );
 // scss-docs-end theme-colors-map
 
