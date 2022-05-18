@@ -1,5 +1,3 @@
-@import "../../../resources/sass/frontend/common";
-
 .detail {
 
   position: relative;
@@ -36,7 +34,7 @@
       &:after {
 
         content: '';
-        background-color: $primary;
+        background-color: #fff;
         position: absolute;
         top: 2px;
         left: 2px;
@@ -59,8 +57,7 @@
           &-title {
 
             font-size: 1.3rem;
-            font-family: get-font-family($bold-font-map);
-            color: $white;
+            color: #fff;
             margin-bottom: .5rem;
             display: inline-block;
           }

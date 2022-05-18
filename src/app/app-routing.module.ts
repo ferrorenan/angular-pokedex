@@ -4,11 +4,17 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule),
+    data: {
+      animation: 'homePage'
+    }
   },
   {
     path: 'pokedex',
-    loadChildren: () => import('./pages/pokedex/pokedex.module').then(m => m.PokedexModule)
+    loadChildren: () => import('./pages/pokedex/pokedex.module').then(m => m.PokedexModule),
+    data: {
+      animation: 'pokedexPage'
+    }
   },
   {
     path: 'pokedex/:id',
